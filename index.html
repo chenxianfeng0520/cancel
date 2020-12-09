@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CANCEL·博客</title>
+    <link rel="icon" type="image/x-icon" href="./i/favicon.png">
+    <link rel="stylesheet" href="./i/style.css">
+</head>
+
+<body>
+    
+    <div id="app">
+        <div class="wrapper">
+            <div class="nav">
+                <div class="logo" @click="backIndex()">cancel·博客</div>
+                <ul v-for="(item1,i) in types" :key="i">
+                    <li v-for="(item,index) in contextList" :key="index" v-if="item.type==item1">
+                        <a :href="'?id='+item.id">{{item.title}}</a>
+                        <span class="spacer boxFlex"></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="context">
+                <div class="section">
+                    <h1 class="directory">{{context.title}}</h1>
+                </div>
+                <div class="section" v-for="(item,index) in context.context" :key="index">
+                    <div v-for="(val,i) in item" :key="i">
+                        <p v-if="val.type == 'text'">{{val.text}}</p>
+                        <img :src="val.url" alt="" v-if="val.type == 'img'">
+                    </div>
+                </div>
+            </div>
+            <img src="./i/cw.png" alt="" class="cw">
+        </div>
+        <div class="page-footer">
+            <ul class="page-footer__list">
+                <li class="page-footer__item page-footer__item_copy">
+                    ©&nbsp;2020&nbsp; Chen Xianfeng
+                </li>
+                <li class="page-footer__item page-footer__item_about">
+                    <a class="page-footer__link" href="./about.html">关于博客</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="./i/vue.js"></script>
+<script src="./i/show.js"></script>
+<script src="./i/index.js"></script>
+
+</html>

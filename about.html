@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于博客</title>
+    <link rel="icon" type="image/x-icon" href="./i/favicon.png">
+    <link rel="stylesheet" href="./i/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="wrapper">
+            <div class="nav">
+                <div class="logo" @click="backIndex()">cancel·博客</div>
+                <ul v-for="(item1,i) in types" :key="i">
+                    <li v-for="(item,index) in contextList" :key="index" v-if="item.type==item1">
+                        <a :href="'./index.html?id='+item.id">{{item.title}}</a>
+                        <span class="spacer boxFlex"></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="context">
+                <div class="section">
+                    <h1 class="directory">关于博客</h1>
+                </div>
+                <div class="section">
+期待更新..
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./i/vue.js"></script>
+<script src="./i/show.js"></script>
+<script src="./i/index.js"></script>
+
+</html>

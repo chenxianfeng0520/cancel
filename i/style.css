@@ -1,0 +1,228 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: #222;
+    box-sizing: border-box;
+}
+#app, body, html {
+    height: 100%;
+}
+body{
+    text-size-adjust: none;
+}
+
+ul {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+.wrapper{
+    min-height: 100%;
+    margin-bottom: -100px;
+    position: relative;
+}
+.wrapper:after {
+    content: "";
+    display: block;
+    z-index: -1;
+    height: 100px;
+}
+.nav {
+    background: url(./logo.png) no-repeat;
+    background-position: center 10px;
+    width: 220px;
+    float: left;
+    margin: 0;
+    padding: 150px 20px 0;
+    font-size: 13px;
+    text-shadow: 1px 1px #fff;
+    position: relative;
+    z-index: 1;
+}
+
+.context {
+    margin: 0 0 0 220px;
+    padding: 0 20px;
+    font-family: "Georgia", Times New Roman, Times, serif;
+    position: relative;
+}
+
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 21px 0 0 0;
+}
+
+.nav ul li {
+    height: 22px;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: horizontal;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: horizontal;
+    box-align: stretch;
+    width: 100%;
+}
+
+.nav ul li>* {
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    box-flex: 0;
+    display: block;
+}
+
+.nav ul a {
+    color: #2e87dd;
+    text-decoration: none;
+}
+
+.block_title {
+    font-size: 16px;
+}
+
+.context .section {
+    padding: 48px 0;
+    background-image: url(line.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    width: 576px;
+    margin: 0 auto;
+    font-size: 15px;
+    text-indent: 2em;
+    line-height: 24px;
+}
+
+.directory {
+    padding: 0 0 65px 0;
+    margin: 0 0 14px 0;
+    font-weight: normal;
+    font-size: 21px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #222;
+    background-image: url(arrow-x.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    font-family: "Inconsolata", Andale Mono, Monaco, Monospace;
+    text-indent:0;
+}
+
+.directory2 {
+    padding: 0 0 18px 0;
+    margin: 0 0 7px 0;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 24px;
+    text-align: center;
+    color: #222;
+    background-image: url(arrow.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    font-family: "Inconsolata", Andale Mono, Monaco, Monospace;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 0 #fff;
+    text-indent:0;
+}
+
+.pre {
+    line-height: 18px;
+    font-size: 13px;
+    margin: 7px 0 21px;
+    padding: 5px 10px;
+    overflow: auto;
+    background-color: #fafafa;
+    border: 1px solid #e6e6e6;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    white-space: pre;
+}
+
+.code {
+    background-color: #fafafa;
+    color: #333;
+}
+
+.context .section img {
+    margin: 8px 0;
+}
+
+.logo {
+    text-align: center;
+    font-size: 19px;
+    margin: 5px 0;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+span.spacer {
+    color: #2e87dd;
+    margin: 0 3px 0 5px;
+    background-image: url(dot.png);
+    background-repeat: repeat-x;
+    background-position: left 13px;
+    -webkit-box-flex: 1!important;
+}
+
+.page-footer {
+    position: relative;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 70px;
+    margin-top: 30px;
+    padding: 0 48px;
+    color: #9d9d9d;
+    background: #fbfafa;
+    border-top: 2px solid #f3f2f1;
+    margin-top: 100px;
+}
+
+.page-footer__list {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.page-footer:after {
+    display: table;
+    content: "";
+}
+.page-footer__item {
+    margin-right: 12px;
+    white-space: nowrap;
+}
+
+.page-footer__item:not(:nth-last-child(-n+1)):after {
+    margin-left: 12px;
+    content: "|";
+}
+.page-footer__link {
+    color: #3b86c4;
+}
+
+.cw{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 200px;
+}
