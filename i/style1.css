@@ -1,0 +1,44 @@
+
+.nav {
+    background: url(./galaxy-tour-badge.svg) no-repeat;
+    background-position: center 10px;
+    background-size: 80%;
+}
+.context .section {
+    background:none;
+}
+.directory {
+    background:none;
+}
+.page-footer{
+    background-color: #1c272b;
+    border: none;
+    z-index: 999;
+}
+.page-footer__item{
+    color: #fff;
+}
+.logo{
+    color: #1c272b;
+}
+.nav{
+    background-color: #fff;
+}
+.nav ul li{
+    height: 30px;
+    font-size: 15px;
+    line-height: 30px;
+}
+.nav ul li:hover{
+    background-color: #1c272b;
+}
+.nav ul li a{
+    text-align: center;
+    width: 100%;
+    letter-spacing: 2px;
+}
+.nav ul li a:hover{
+    text-decoration: underline;
+    text-shadow:none;
+    color: #fff;
+}

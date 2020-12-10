@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CANCEL·博客</title>
+    <title>博客·CANCEL</title>
     <link rel="icon" type="image/x-icon" href="./i/favicon.png">
     <link rel="stylesheet" href="./i/style.css">
+    <link rel="stylesheet" href="./i/style1.css">
 </head>
 
 <body>
@@ -14,11 +15,10 @@
     <div id="app">
         <div class="wrapper">
             <div class="nav">
-                <div class="logo" @click="backIndex()">cancel·博客</div>
+                <div class="logo" @click="backIndex()">博客·cancel</div>
                 <ul v-for="(item1,i) in types" :key="i">
                     <li v-for="(item,index) in contextList" :key="index" v-if="item.type==item1">
                         <a :href="item.url??('index.html?id='+item.id)">{{item.title}}</a>
-                        <span class="spacer boxFlex"></span>
                     </li>
                 </ul>
             </div>
@@ -34,6 +34,12 @@
                     </div>
                 </div>
             </div>
+            <a href="./about.html"><img src="./i/cw.png" alt="" class="cw"></a>
+            <div class="gg">
+                <div class="close">×</div>
+            </div>
+            <!-- <a class="page-pre" :href="'?id='+(id-1)">上一篇</a>
+            <a class="page-next" :href="'?id='+(id+1)">下一篇</a> -->
         </div>
         <div class="page-footer">
             <ul class="page-footer__list">
