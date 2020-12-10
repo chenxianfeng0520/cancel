@@ -1,6 +1,6 @@
 
 .nav {
-    background: url(./galaxy-tour-badge.svg) no-repeat;
+    background: url(./galaxy-tour-badge.png) no-repeat;
     background-position: center 10px;
     background-size: 80%;
 }
@@ -22,7 +22,7 @@
     color: #1c272b;
 }
 .nav{
-    background-color: #fff;
+    background-color: #eee;
 }
 .nav ul li{
     height: 30px;
@@ -41,4 +41,11 @@
     text-decoration: underline;
     text-shadow:none;
     color: #fff;
+}
+.page-footer{
+    position: relative;
+}
+.page-footer__list{
+    position: absolute;
+    right: 48px;
 }
