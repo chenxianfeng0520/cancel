@@ -9,7 +9,7 @@ var vm = new Vue({
     created() {
         var thar = this
         this.$nextTick(()=>{
-            thar.loadding = false
+            thar.loadding = false;
         })
     },
     computed: {
@@ -22,13 +22,19 @@ var vm = new Vue({
             return Number(location.search.split("=")[1]??1)
         }
     },
+    mounted(){
+
+    },
     methods: {
         backIndex(){
             location.href="index.html";
-        },
+        },  
         ss(){
             this.isShowNav = !this.isShowNav
         }
     }
 })
 
+setTimeout(()=>{
+    document.getElementById("app").style.display = 'block';
+},0)
