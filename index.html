@@ -12,7 +12,7 @@
 <body>
 
     <div id="app">
-        <div class="wrapper">
+        <div class="wrapper" v-if="!loadding">
             <div class="nav">
                 <div class="logo" @click="backIndex()">cancel·博客</div>
                 <ul v-for="(item1,i) in types" :key="i">
@@ -35,7 +35,7 @@
                 </div>
             </div>
         </div>
-        <div class="page-footer">
+        <div class="page-footer" v-if="!loadding">
             <ul class="page-footer__list">
                 <li class="page-footer__item page-footer__item_copy">
                     ©&nbsp;2020&nbsp; Chen Xianfeng
@@ -45,6 +45,7 @@
                 </li>
             </ul>
         </div>
+        <div class="loadding" v-if="loadding">稍等片刻...</div>
     </div>
 </body>
 <script src="./i/vue.js"></script>

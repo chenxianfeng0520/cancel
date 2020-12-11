@@ -42,10 +42,22 @@
     text-shadow:none;
     color: #fff;
 }
-.page-footer{
-    position: relative;
+.ss{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    position: fixed;
+    left: 230px;
+    top: 40px;
+    cursor: pointer;
+    z-index: 999;
 }
-.page-footer__list{
-    position: absolute;
-    right: 48px;
+.ss img{
+    width: 60%;
+    height: 60%;
+    margin-top: 8px;
+    margin-left: 8px;
+}
+.ss:hover{
+    background-color: #f4f4f4;
 }

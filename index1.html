@@ -11,10 +11,9 @@
 </head>
 
 <body>
-
     <div id="app">
-        <div class="wrapper">
-            <div class="nav">
+        <div class="wrapper" v-if="!loadding">
+            <div class="nav" v-if="isShowNav">
                 <div class="logo" @click="backIndex()">博客·cancel</div>
                 <ul v-for="(item1,i) in types" :key="i">
                     <li v-for="(item,index) in contextList" :key="index" v-if="item.type==item1">
@@ -22,7 +21,8 @@
                     </li>
                 </ul>
             </div>
-            <div class="context">
+            <div class="ss" @click="ss" :style="'left:'+(isShowNav?'240px':'20px')"><img src="./i/ss.png" alt=""></div>
+            <div class="context" :style="'margin-left:'+(isShowNav?'220px':'0px')">
                 <div class="section section1">
                     <h1 class="directory">{{context.title}}</h1>
                 </div>
@@ -41,7 +41,7 @@
             <!-- <a class="page-pre" :href="'?id='+(id-1)">上一篇</a>
             <a class="page-next" :href="'?id='+(id+1)">下一篇</a> -->
         </div>
-        <div class="page-footer">
+        <div class="page-footer" v-if="!loadding">
             <ul class="page-footer__list">
                 <li class="page-footer__item page-footer__item_copy">
                     ©&nbsp;2020&nbsp; Chen Xianfeng
@@ -51,10 +51,14 @@
                 </li>
             </ul>
         </div>
+        <div class="loadding" v-if="loadding">稍等片刻...</div>
     </div>
+
 </body>
 <script src="./i/vue.js"></script>
 <script src="./i/show.js"></script>
+<script src="./i/jquery-1.8.3.min.js"></script>
 <script src="./i/index.js"></script>
+<script src="./i/index2.js"></script>
 
 </html>

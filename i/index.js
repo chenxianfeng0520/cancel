@@ -2,9 +2,15 @@ var vm = new Vue({
     el: "#app",
     data: {
         contextList: contextList,
-        types: types
+        types: types,
+        loadding: true,
+        isShowNav: true
     },
     created() {
+        var thar = this
+        this.$nextTick(()=>{
+            thar.loadding = false
+        })
     },
     computed: {
         context() {
@@ -19,6 +25,10 @@ var vm = new Vue({
     methods: {
         backIndex(){
             location.href="index.html";
+        },
+        ss(){
+            this.isShowNav = !this.isShowNav
         }
     }
 })
+

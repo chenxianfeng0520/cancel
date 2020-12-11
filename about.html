@@ -16,7 +16,7 @@
                 <div class="logo" @click="backIndex()">cancel·博客</div>
                 <ul v-for="(item1,i) in types" :key="i">
                     <li v-for="(item,index) in contextList" :key="index" v-if="item.type==item1">
-                        <a :href="'./index.html?id='+item.id">{{item.title}}</a>
+                        <a :href="item.url??('index.html?id='+item.id)">{{item.title}}</a>
                         <span class="spacer boxFlex"></span>
                     </li>
                 </ul>

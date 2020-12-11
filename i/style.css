@@ -282,3 +282,37 @@ span.spacer {
 .page-next:hover{
     background-color: #ceccca;
 }
+.loadding-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background: url(./black-opacity.png); */
+    z-index: 2;
+}
+.loadding{
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #1c272b;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+    right: 0;
+    bottom: 0;
+    z-index: 4;
+    color: #fff;
+    font-size: 18px;
+    /* background: url(./black-opacity.png); */
+}
+.page-footer{
+    position: relative;
+}
+.page-footer__list{
+    position: absolute;
+    right: 48px;
+}
