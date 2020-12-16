@@ -4,7 +4,7 @@ var contextList = [
         id: 1,
         type: 'js',
         title: 'js中this的指向',
-        url:'index1.html?id=1',
+        url:'index3.html?id=1',
         context: [
             [
                 {

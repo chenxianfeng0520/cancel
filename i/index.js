@@ -9,7 +9,9 @@ var vm = new Vue({
     created() {
         var thar = this
         this.$nextTick(()=>{
-            thar.loadding = false;
+            setTimeout(()=>{
+                thar.loadding = false;
+            },1000) 
         })
     },
     computed: {
@@ -19,6 +21,7 @@ var vm = new Vue({
             })[0]
         },
         id(){
+            //  获取id的传值
             return Number(location.search.split("=")[1]??1)
         }
     },

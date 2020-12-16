@@ -1,0 +1,16 @@
+.directory{
+    background-image: url(2g4eo0000001000.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-shadow: 1px 1px #fff;
+    padding: 30px 0 35px 0;
+}
+
+.page-footer{
+    background-color: #1f485c;
+}
+.nav {
+    background: url(./logo.png) no-repeat;
+    background-position: center 10px;
+}
